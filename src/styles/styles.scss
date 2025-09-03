@@ -1,0 +1,85 @@
+@use "./variables" as *;
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Woodford", sans-serif;
+  color: var(--txtColor);
+  font-weight: 500;
+  list-style: none;
+}
+h1
+{
+  font-family: "Heming", sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+
+}
+h2
+{
+  font-family: "Heming", sans-serif;
+  font-weight: bold;
+}
+
+img
+{
+  border-radius: var(--borderRadius);
+}
+video
+{
+  border-radius: var(--borderRadius);
+}
+iframe
+{
+  border: none;
+}
+body
+{
+  border: solid rgba(0, 0, 0, 0) 1px ;
+  background: linear-gradient(180deg, #121014 0%, #050405 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.btn {
+  transition: all 0.3s ease;
+  transform-origin: 50% 0;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.orangeAnim{
+  transition: 0.2s ease;
+  &:hover{
+    color: var(--contrastColor);
+  }
+}
+.hidden
+{
+  display: none;
+}
+.orangeImgAnim{
+  transition: 0.2s ease;
+  &:hover{
+    filter:var(--contrastFilter);
+  }
+}
+.orangeHover
+{
+  /* transition: filter 0.3s ease; */
+
+  &:hover {
+    transform: scale(1.05);
+    transform-origin: 50% 50%;
+
+    filter: drop-shadow(0px 0px 5px var(--contrastColor));
+
+  }
+}
