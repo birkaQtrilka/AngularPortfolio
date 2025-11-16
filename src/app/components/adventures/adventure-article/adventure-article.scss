@@ -1,7 +1,8 @@
-:root{
+:root {
   overflow: hidden;
   transition: height 0.3s ease, opacity 0.3s ease;
   opacity: 1;
+
 }
 
 .hide-animate {
@@ -9,103 +10,115 @@
   opacity: 0;
   pointer-events: none;
 }
+
 .show-animate {
   opacity: 1;
   pointer-events: auto;
 }
-h1{
+
+h1 {
   margin-bottom: 20px;
 }
-video{
+
+video {
   object-fit: cover;
 }
->div{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-  margin-bottom: 50px;
-  width: 70%;
+
+.tags {
+  margin: 0 0 50px 0;
 }
-:not(:first-child){
-  margin-top: 100px;
-}
+
 /* Description section */
-section
-{
-  width: 70%;
+article>section {
   margin: auto;
   text-align: left;
-  h2{
-    margin-bottom: 20px;
-  }
-  p{
-    margin-bottom: 20px;
-  }
-  >div
-  {
-    width: 100%;
-    margin: auto;
-  }
-  a{
-    color: var(--contrastColor);
-  }
-  figure{
-    text-align: center;
-  }
-  section{
-    width: 100%;
-    &>h3{
-      display: inline;
+
+  ::ng-deep {
+
+    h2,
+    p {
+      margin-bottom: 20px;
     }
-    &>span{
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    a {
       color: var(--contrastColor);
     }
+
+  }
+
+  >div {
+    width: 100%;
+    margin: auto;
     margin-bottom: 20px;
   }
-  h3{
+
+  figure {
+    text-align: center;
+  }
+
+  section {
+    width: 100%;
+
+    &>h3 {
+      display: inline;
+    }
+
+    &>span {
+      color: var(--contrastColor);
+    }
+
+    margin-bottom: 20px;
+  }
+
+  h3 {
     margin-top: 10px;
   }
-  p.credits{
+
+  p.credits {
     font-size: 10px;
     max-width: 200px;
   }
 }
-figure img{
+
+figure img {
   width: 100%;
 }
-section.sideBySideImages{
+
+section.sideBySideImages {
   margin: 0;
   width: 100%;
   display: flex;
+  align-items: start;
   flex-basis: 45%;
-  img
-  {
+
+  img {
     width: 100%;
     object-fit: contain;
   }
 }
 
 @media screen and (min-width: 767px) {
-  video
-  {
+  video {
     width: 60%;
     height: 380px;
     object-fit: cover;
   }
-  iframe
-  {
+
+  iframe {
     width: 80%;
     height: 350px;
   }
-  >div
-  {
+
+  >div {
     width: 80%;
   }
-  section.sideBySideImages
-  {
+
+  section.sideBySideImages {
     flex-direction: row;
     column-gap: 10px;
   }
 }
-

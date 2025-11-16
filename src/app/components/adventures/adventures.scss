@@ -2,10 +2,15 @@ main{
   min-height: 400px;
   background-color: var(--cardColor);
   box-shadow: var(--grayShadow);
-  padding: 50px 50px 70px;
+  padding: 50px 80px;
   text-align: center;
   border-radius: var(--borderRadius);
   position: relative;
+
+  app-adventure-article:not(:first-child){
+    margin-top: 100px;
+    display: block;
+  }
 }
 
 @media screen and (min-width: 767px){
@@ -14,8 +19,6 @@ main{
     margin: auto;
     margin-top: 150px;
     width: 70%;
-
-
   }
   .tags
   {

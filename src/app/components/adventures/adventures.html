@@ -1,7 +1,13 @@
-
 <main>
-  <app-adventure-article [title]="'MyTitle'"/>
-  <app-adventure-article [title]="'MyTitle'"/>
-  <app-adventure-article [title]="'MyTitle'"/>
-  <app-adventure-article [title]="'MyTitle'"/>
+  @for (adventure of adventures; track $index) {
+    <app-adventure-article
+      [title]="adventure.title"
+      [videoPath]="adventure.videoPath"
+      [tags]="adventure.tags"
+      [description]="adventure.description"
+      [timeSpent]="adventure.timeSpent"
+      [imagePaths]="adventure.images"
+      [githubLink]="adventure.githubLink"
+    ></app-adventure-article>
+  }
 </main>

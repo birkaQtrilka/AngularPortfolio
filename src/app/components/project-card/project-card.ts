@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-project-card',
   imports: [RouterModule],
