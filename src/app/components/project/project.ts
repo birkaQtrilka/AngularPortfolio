@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.html',
-  styleUrl: './project.scss'
+  styleUrl: './project.scss',
+  imports: [RouterLink]
 })
 export class ProjectPage implements  OnInit {
   project: Project | undefined;
