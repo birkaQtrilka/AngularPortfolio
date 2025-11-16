@@ -1,0 +1,145 @@
+.intro {
+  margin-top: 100px;
+  text-align: center;
+
+  .name {
+    font-size: large;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-top: 15px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    color: var(--contrastColor);
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: small;
+    line-height: 20px;
+    margin-bottom: 50px;
+  }
+
+  iframe {
+    width: calc(var(--largeMargin ));
+    min-width: 500px;
+
+    box-shadow: var(--lightShadow);
+    border: 5px solid var(--footerColor);
+    border-radius: var(--borderRadius);
+    height: 500px;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      box-shadow: var(--lighterShadow);
+    }
+  }
+
+  app-separation-line {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+#AboutMe {
+  width: var(--largeMargin);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  flex-direction: row-reverse;
+
+  article {
+    flex-basis: 60%;
+    text-align: left;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      transform-origin: left;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  aside {
+    flex-basis: 35%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+
+}
+
+main {
+  width: var(--largeMargin);
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  margin-bottom: 250px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  >h1 {
+    flex-basis: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  app-separation-line {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+
+  app-project-card {
+    flex-basis: calc(50% - var(--largeProjectArticleGap));
+    padding: 5px;
+    margin-bottom: 100px;
+    min-height: 300px;
+  }
+}
+
+#tools {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 200px;
+  text-align: center;
+
+  h2 {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Align items to the top */
+    justify-content: center;
+    list-style: none;
+    /* Optional: remove bullets */
+    padding: 0;
+    gap: 10px;
+    margin: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  img {
+    width: 90px;
+  }
+}
