@@ -17,30 +17,14 @@
 <main>
   <h1 id="Projects" class="scaleInRange">Projects</h1>
   <app-separation-line></app-separation-line>
-
-  <app-project-card title="Procedural City" description="Tooling to build a city"
-    imagePath="assets/Images/Projects/ProceduralArt.png" route="/ProceduralArt"></app-project-card>
-
-  <app-project-card title="Planets generator" description="Procedural mesh generator"
-    imagePath="assets/Images/Projects/Planets.png" route="/Planets"></app-project-card>
-
-  <app-project-card title="C++ Projects" description="Rendering, input-output, terrain generation"
-    imagePath="assets/Images/Projects/Rendering.png" route="/CppProjects"></app-project-card>
-
-  <app-project-card title="Front End" description="Vue.js, VUEx, mobile/desktop responsive design"
-    imagePath="assets/Images/Projects/VUEX.png" route="/FrontEnd"></app-project-card>
-
-  <app-project-card title="Internship at Tible" description="Angular, TypeScript, dashboard application"
-    imagePath="assets/Images/Projects/Internship.png" route="/FrontEndInternship"></app-project-card>
-
-  <app-project-card title="Networking" description="C# Tcp client, server authoritative, heartbeats"
-    imagePath="/assets/Images/Projects/Networking.png" route="/Networking"></app-project-card>
-
-  <app-project-card title="Unity Editor" description="World configuration editor tool"
-    imagePath="/assets/Images/Projects/UnityEditor.png" route="/UnityEditor"></app-project-card>
-
-  <app-project-card title="Ball Blaze" description="2DPhysics, prefab system, level builder"
-    imagePath="/assets/Images/Projects/posterFinal.png" route="/BallBlaze"></app-project-card>
+  @for (card of cards; track $index) {
+    <app-project-card
+    [title]="card.title"
+    [description]="card.description"
+    [imagePath]="card.imagePath"
+    [route]="card.route"
+    ></app-project-card>
+  }
 </main>
 
 <section id="AboutMe" class="starAvoid scaler">
@@ -74,22 +58,15 @@
     <figure class="glossy-container"><img src="assets/Images/MyPortrait.jpg" alt="">
       <div class="glossy-shine"></div>
     </figure>
-
   </aside>
 </section>
 
 <section id="tools">
   <h2 class="scaleInRange">Tools and skills</h2>
   <ul>
-    <li><img class="btn" src="assets/Images/ToolLogos/UnityLogo.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/Logo_C_sharppng.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/logoCpp.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/JavaLogo.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/FigmaLogopng.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/angular-logo.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/vueLogo.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/HtmlLogo.png" alt=""></li>
-    <li><img class="btn" src="assets/Images/ToolLogos/CSSLogo.png" alt=""></li>
+    @for (tool of tools; track $index) {
+      <li><img class="btn" src="{{tool.imagePath}}" alt="{{tool.alt}}"></li>
+    }
   </ul>
 </section>
 

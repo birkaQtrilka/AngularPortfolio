@@ -1,5 +1,17 @@
 @use "./variables" as *;
+@font-face 
+{
+    font-family: Heming;
+  /* served from src/assets/Fonts -> available at /assets/Fonts/ */
+  src: url('/assets/Fonts/heming-variable.ttf') format('truetype');
+}
 
+@font-face 
+{
+    font-family: Woodford;
+  /* served from src/assets/Fonts/WoodfordBornePro -> available at /assets/Fonts/WoodfordBornePro/ */
+  src: url('/assets/Fonts/WoodfordBornePro/WoodfordBournePro-Regular.ttf') format('truetype');
+}
 * {
   margin: 0;
   padding: 0;
