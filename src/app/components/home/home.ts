@@ -5,10 +5,12 @@ import { TOOLS } from './constants/tools.constant';
 import { ProjectCard } from '../project-card/project-card';
 import { SeparationLine } from '../separation-line/separation-line';
 import { ContactCard } from '../contact-card/contact-card';
+import { ScrollScaleDirective } from '../../directives/scale-scroll.directive';
+import { GlossyScrollDirective } from "../../directives/glossy-scroll.directive";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, ProjectCard, SeparationLine, ContactCard],
+  imports: [CommonModule, ProjectCard, SeparationLine, ContactCard, ScrollScaleDirective, GlossyScrollDirective],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

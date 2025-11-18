@@ -1,3 +1,8 @@
+:host {
+  display: block;
+
+}
+
 #contact {
   max-width: 500px;
   margin: auto;
@@ -7,7 +12,6 @@
   margin-bottom: 200px;
   transition: transform 0.2s ease;
   transition: box-shadow 0.3s ease;
-
   &:hover {
     transform: scale(1.05);
     transform-origin: 50% 0%;

@@ -15,10 +15,11 @@
   </iframe>
 </section>
 <main>
-  <h1 id="Projects" class="scaleInRange">Projects</h1>
-  <app-separation-line></app-separation-line>
+  <h1 id="Projects" scrollScale >Projects</h1>
+  <app-separation-line scrollScale></app-separation-line>
   @for (card of cards; track $index) {
     <app-project-card
+    scrollScale
     [title]="card.title"
     [description]="card.description"
     [imagePath]="card.imagePath"
@@ -28,41 +29,41 @@
 </main>
 
 <section id="AboutMe" class="starAvoid scaler">
-  <article>
-    <h2 class="scaleInRange">About me</h2>
-    <p>
+  <article scrollScale>
+    <h2 scrollScale class="scaleInRange">About me</h2>
+    <p scrollScale>
       Hello, my name is Stefan and I’m studying at Saxion University of Applied Sciences in a course specializing in
       game development (Creative Media and Game Technologies). I love challenges, sports, and exploration.
     </p>
-    <p>
+    <p scrollScale>
       In the university, I worked with a low-level engine and learned how to integrate it with Tiled, made my own 2D
       physics system, made a procedurally generated dungeon that you can navigate through A*, and many other cool stuff.
       Additionally, I developed my soft skills such as communicating, project managing, splitting tasks into smaller
       ones, solving conflicts, etc. (I was the scrum master in all my group projects, with consistently good results)
     </p>
-    <p>
+    <p scrollScale [offset]="-450">
       Additionally, I participated in a game jam and am constantly working on side projects: quad tree space
       partitioning, wave function collapse, marching squares, boids, and the Altered State gameJam project.
     </p>
-    <p>
+    <p scrollScale [offset]="-520">
       Currently, I'm looking for professional work opportunities as a game programmer and more specifically as a tooling
       engineer.
     </p>
-    <p>
+    <p scrollScale [offset]="-580">
       I’m inspired by people who really put in the work and have always tried to follow the “dirty hands” idea of a
       software engineer. I believe that companies need programmers that know how to get stuff done, not the ones that
       can only tell you the theory behind it.
     </p>
   </article>
   <aside>
-    <figure class="glossy-container"><img src="assets/Images/MyPortrait.jpg" alt="">
+    <figure scrollScale appGlossyScroll class="glossy-container"><img src="assets/Images/MyPortrait.jpg" alt="">
       <div class="glossy-shine"></div>
     </figure>
   </aside>
 </section>
 
-<section id="tools">
-  <h2 class="scaleInRange">Tools and skills</h2>
+<section scrollScale id="tools">
+  <h2 >Tools and skills</h2>
   <ul>
     @for (tool of tools; track $index) {
       <li><img class="btn" src="{{tool.imagePath}}" alt="{{tool.alt}}"></li>
@@ -70,4 +71,4 @@
   </ul>
 </section>
 
-<app-contact-card></app-contact-card>
+<app-contact-card scrollScale></app-contact-card>

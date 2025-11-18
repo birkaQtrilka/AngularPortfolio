@@ -21,6 +21,7 @@ h1 {
 }
 
 video {
+  width: 100%;
   object-fit: cover;
 }
 
@@ -103,7 +104,6 @@ section.sideBySideImages {
 
 @media screen and (min-width: 767px) {
   video {
-    width: 60%;
     height: 380px;
     object-fit: cover;
   }
