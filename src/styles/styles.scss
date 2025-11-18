@@ -265,7 +265,7 @@ header {
 
 /* ---------------------------- Image Pop Up ---------------------------- */
 
-/* ---------------------------- Scroll Bar ---------------------------- */
+/* ---------------------------- Scroll Bar S---------------------------- */
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -285,8 +285,33 @@ header {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--txtColor2);
 }
+html {
+  overflow-y: scroll;
+}
+/* ---------------------------- Scroll Bar E---------------------------- */
 
-/* ---------------------------- Scroll Bar ---------------------------- */
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wobble:active {
+  animation: wobble 0.3s ease-in-out;  /* Apply the wobble animation on click */
+}
 
 
 .glossy-container {
@@ -351,6 +376,11 @@ header {
   background-color: var(--cardColor);
   border-radius: 5px;
   margin-top: 5px;
+
+  &.active {
+    outline: 2px solid var(--contrastColor);
+    outline-offset: -2px;
+  }
 }
 
 .activeTag {

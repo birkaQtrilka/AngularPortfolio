@@ -1,5 +1,9 @@
 <main>
-  @for (adventure of adventures; track $index) {
+  <app-tag-filter
+    [availableTags]="allTags"
+    (filterChanged)="onTagFilterChanged()"
+  ></app-tag-filter>
+  @for (adventure of filteredAdventures; track adventure.title) {
     <app-adventure-article
       [title]="adventure.title"
       [videoPath]="adventure.videoPath"

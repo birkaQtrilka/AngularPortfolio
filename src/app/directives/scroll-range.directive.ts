@@ -1,11 +1,11 @@
 import { Directive, ElementRef, Input, OnInit, Renderer2, OnDestroy } from '@angular/core';
 
 @Directive({
-  selector: '[appBaseScroll]' // Base directive
+  selector: '[appBaseScroll]'
 })
 export class BaseScrollDirective implements OnInit, OnDestroy {
-  @Input() range: number = 300;  // Default range
-  @Input() offset: number = 0;   // Default offset
+  @Input() range: number = 300;  
+  @Input() offset: number = 0;  
   
   protected container: HTMLElement;
   private scrollListener: () => void = () => {};

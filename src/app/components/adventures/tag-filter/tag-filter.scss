@@ -1,0 +1,51 @@
+>section {
+  margin-top: 40px;
+
+  >ul {
+    width: 100%;
+  }
+
+}
+
+mat-icon {
+  vertical-align: middle;
+  font-size: 20px;
+  padding: 3px 2px !important;
+  width: 36px;
+  height: 26px;
+  transition: transform 0.3s ease; 
+}
+
+.filter-container {
+  position: relative;
+}
+
+.search-input {
+  position: absolute;
+  left: 0;
+  top: 4.5px;
+  padding: .2rem .7rem;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 200px;
+  background-color: transparent;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+
+  :nth-child(1) {
+    margin-left: 220px;
+  }
+  .tag {//it's because of the scroll bar
+    padding: 3px 8px;
+    &:last-child {
+      margin-left: auto;
+    }
+    
+  }
+}
+
