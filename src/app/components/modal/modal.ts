@@ -4,7 +4,10 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
   selector: 'app-modal',
   imports: [],
   templateUrl: './modal.html',
-  styleUrl: './modal.scss'
+  styleUrl: './modal.scss',
+  host: {
+    '(click)': 'close()'
+  }
 })
 export class Modal {
   @ViewChild('image') image!: ElementRef;
@@ -22,8 +25,8 @@ export class Modal {
     this.host.nativeElement.style.display = "block";
 
     // // Lock body in place
-    // document.body.style.position = "fixed";
-    // document.body.style.top = `-${this.prevScrollY}px`;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${this.prevScrollY}px`;
     // document.body.style.left = "0";
     // document.body.style.right = "0";
     // document.body.style.width = "100%";
@@ -40,14 +43,16 @@ export class Modal {
     const scrollY = this.prevScrollY;
 
     // Unlock body
-    // document.body.style.position = "";
-    // document.body.style.top = "";
+    document.body.style.position = "";
+    document.body.style.top = "";
     // document.body.style.left = "";
     // document.body.style.right = "";
-    // document.body.style.width = "";
 
     // Restore scroll position
     window.scrollTo(0, scrollY);
   }
 
+  imageClick(event: MouseEvent) {
+    event.stopPropagation();
+  }
 }

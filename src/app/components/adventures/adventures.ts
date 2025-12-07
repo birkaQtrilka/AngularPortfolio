@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import { CodingAdventure } from '../../models/coding-adventure.model';
 import { CODING_BOIDS } from './constants/boids.adventure';
 import { CODING_DOTS } from './constants/dots.adventure';
@@ -9,14 +9,16 @@ import { CODING_WFC } from './constants/wfc.adventure';
 import { AdventureArticle } from './adventure-article/adventure-article';
 import { TagFilter } from "./tag-filter/tag-filter";
 import { RouterLink } from '@angular/router';
+import {NavigationList} from "../navigation-list/navigation-list";
 
 @Component({
   selector: 'app-adventures',
   imports: [
     AdventureArticle,
     TagFilter,
-    RouterLink
-],
+    RouterLink,
+    NavigationList
+  ],
   templateUrl: './adventures.html',
   styleUrl: './adventures.scss'
 })
@@ -29,6 +31,8 @@ export class Adventures {
     CODING_PHYSICS,
     CODING_WFC,
   ];
+  @ViewChildren(AdventureArticle, { read: ElementRef })
+  articleElements!: QueryList<ElementRef<HTMLElement>>;
   @ViewChild(TagFilter) tagFilter!: TagFilter;
   filteredAdventures = [...this.adventures];
 
@@ -46,5 +50,21 @@ export class Adventures {
       top: 0,
       behavior: "smooth"
     });
+  }
+
+  scrollToAdventure(index: number) {
+    const elements = this.articleElements.toArray();
+    const target = elements[index]?.nativeElement;
+    if (!target) {
+      return;
+    }
+
+    const yOffset = -100;
+    const y =
+      target.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }

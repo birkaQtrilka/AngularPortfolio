@@ -17,6 +17,12 @@
       </path>
     </svg>
   </a>
+
+  <app-navigation-list
+      [adventures]="filteredAdventures"
+      (selectAdventure)="scrollToAdventure($event)"
+  ></app-navigation-list>
+
   <app-tag-filter [availableTags]="allTags" (filterChanged)="onTagFilterChanged()"></app-tag-filter>
   @for (adventure of filteredAdventures; track adventure.title) {
   <app-adventure-article [title]="adventure.title" [videoPath]="adventure.videoPath" [tags]="adventure.tags"
