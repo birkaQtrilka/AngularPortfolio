@@ -1,5 +1,6 @@
-import {Component, input, signal} from '@angular/core';
-import {CommonModule, NgIf, NgOptimizedImage} from '@angular/common';
+import {Component, input} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ModalService} from "../../../services/modal.service";
 
 @Component({
   selector: 'app-adventure-article',
@@ -25,5 +26,8 @@ export class AdventureArticle {
   timeSpent = input("5 days"); // should be a number that is later parsed
   imagePaths = input(['/assets/Images/sideProjects/Boids.png']);
   githubLink = input("https://github.com/birkaQtrilka/BoidsWithDOTS/blob/main/Assets/BoidSystem.cs");
+
+  constructor(protected modalService: ModalService) {
+  }
 }
 
