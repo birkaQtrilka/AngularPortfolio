@@ -59,8 +59,7 @@ body {
 
 .btn {
   transition: all 0.3s ease;
-  transform-origin: 50% 0;
-
+  transform-origin: center center;
   &:hover {
     transform: scale(1.05);
   }
