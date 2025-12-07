@@ -8,12 +8,14 @@ import { CODING_PHYSICS } from './constants/physics.adventure';
 import { CODING_WFC } from './constants/wfc.adventure';
 import { AdventureArticle } from './adventure-article/adventure-article';
 import { TagFilter } from "./tag-filter/tag-filter";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-adventures',
   imports: [
     AdventureArticle,
-    TagFilter
+    TagFilter,
+    RouterLink
 ],
   templateUrl: './adventures.html',
   styleUrl: './adventures.scss'
@@ -35,7 +37,14 @@ export class Adventures {
   );
 
   public onTagFilterChanged() {
-    this.filteredAdventures = this.tagFilter.applyFilter(this.adventures, a => a.tags, a => a.title);
-    
+    this.filteredAdventures = this.tagFilter.applyFilter(
+      this.adventures, a => a.tags, a => a.title.toLowerCase());
+  }
+
+  public scrollUp() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 }

@@ -1,27 +1,77 @@
-main{
-  min-height: 400px;
+main {
+  min-height: 900px;
   background-color: var(--cardColor);
   box-shadow: var(--grayShadow);
-  padding: 50px 80px;
+  padding: 90px 120px;
   text-align: center;
   border-radius: var(--borderRadius);
   position: relative;
 
-  app-adventure-article:not(:first-child){
+  app-adventure-article:not(:first-child) {
     margin-top: 100px;
     display: block;
   }
+
+  .back-btn {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    z-index: 3;
+
+    svg {
+      width: 50px;
+      height: 50px;
+      transform: rotate(-90deg);
+
+      & #primary {
+        fill: var(--cardColor);
+      }
+
+      & #secondary {
+        fill: var(--contrastColor);
+      }
+
+      &:hover {
+        filter: drop-shadow(0px 0px 5px var(--lighterViolet));
+      }
+    }
+
+  }
+
+  .up-button {
+    border: none
+  }
+
+  .up-button>svg {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 3;
+    right: 20px;
+    bottom: 20px;
+    background-color: transparent;
+    border: none;
+    filter: drop-shadow(0px 0px 5px var(--lightViolet));
+    transform-origin: 50% 50%;
+
+    &:hover {
+      filter: drop-shadow(0px 0px 5px var(--lighterViolet));
+    }
+
+    & #secondary {
+      fill: var(--contrastColor);
+    }
+  }
 }
 
-@media screen and (min-width: 767px){
-  main
-  {
+@media screen and (min-width: 767px) {
+  main {
     margin: auto;
     margin-top: 150px;
     width: 70%;
   }
-  .tags
-  {
+
+  .tags {
     width: 60%;
   }
 }

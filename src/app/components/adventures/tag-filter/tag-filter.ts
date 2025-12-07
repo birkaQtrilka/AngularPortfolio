@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgClass } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { MatRippleModule } from '@angular/material/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {NgClass} from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+import {MatRippleModule} from '@angular/material/core';
+
 @Component({
   selector: 'app-tag-filter',
   imports: [FormsModule, NgClass, MatIconModule, MatRippleModule],
@@ -35,17 +36,14 @@ export class TagFilter {
 
   public applyFilter<T>(entries: T[], tagBody: (i: T) => string[], searchBody: (i: T) => string) {
 
-    const res = entries.filter((entry) => {
-      const searcheable: string = searchBody(entry);
-      const matchesSearch = !this.search || searcheable.startsWith(this.search);
+    return entries.filter((entry) => {
+      const searchable: string = searchBody(entry);
+      const matchesSearch = !this.search || searchable.startsWith(this.search);
       const tags: string[] = tagBody(entry);
 
       const matchesTags = tags.length === 0 || this.every(tags);
       return matchesSearch && matchesTags;
-    })
-    console.log(res);
-
-    return res;
+    });
   }
 
   private every(tags: string[]) {
