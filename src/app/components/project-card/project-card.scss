@@ -7,12 +7,11 @@ article {
   border: 5px solid var(--cardColor);
   border-radius: var(--borderRadius);
   box-shadow: var(--lightShadow);
-  transition: transform 0.2s ease;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 
   &:hover {
     transform: scale(1.05);
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
     box-shadow: var(--lighterShadow);
 
   }
@@ -24,14 +23,14 @@ article {
     margin: auto;
     transition: transform 0.2s ease;
     text-align: center;
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
     border-radius: var(--borderRadius);
 
     figure img {
       width: 200px;
       height: 200px;
       object-fit: cover;
-      outline: 0px solid var(--cardColor);
+      outline: 0 solid var(--cardColor);
 
       transition: outline 0.2s ease;
     }

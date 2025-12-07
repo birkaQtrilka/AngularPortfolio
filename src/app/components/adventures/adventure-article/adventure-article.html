@@ -17,7 +17,7 @@
     <section [class.sideBySideImages]="imagePaths().length > 1">
     @for (img of imagePaths(); track img) {
       <figure>
-        <img  class="popUp" src="{{img}}" alt="">
+        <img  class="popUp" [src]="img" alt="">
       </figure>
     }
     </section>

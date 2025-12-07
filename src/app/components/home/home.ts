@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { PROJECT_CARDS } from './constants/project-cards.constant';
 import { TOOLS } from './constants/tools.constant';
 import { ProjectCard } from '../project-card/project-card';
@@ -10,7 +10,7 @@ import { GlossyScrollDirective } from "../../directives/glossy-scroll.directive"
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, ProjectCard, SeparationLine, ContactCard, ScrollScaleDirective, GlossyScrollDirective],
+  imports: [CommonModule, ProjectCard, SeparationLine, ContactCard, ScrollScaleDirective, GlossyScrollDirective, NgOptimizedImage],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

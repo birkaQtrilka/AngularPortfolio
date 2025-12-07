@@ -1,10 +1,12 @@
 import {Component, signal} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'my-navbar',
   imports: [
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'

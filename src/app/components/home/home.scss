@@ -46,10 +46,9 @@
 
 #AboutMe {
   width: var(--largeMargin);
-  margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin: auto auto 50px;
   flex-direction: row-reverse;
 
   article {
@@ -63,7 +62,6 @@
     h2 {
       margin-bottom: 30px;
       transform-origin: left;
-      margin-bottom: 30px;
     }
 
   }
@@ -82,12 +80,9 @@
 
 main {
   width: var(--largeMargin);
-  margin: auto;
-  margin-top: 100px;
   display: flex;
-  justify-content: center;
   border-radius: 3px;
-  margin-bottom: 250px;
+  margin: 100px auto 250px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -113,13 +108,11 @@ main {
 
 #tools {
   width: 300px;
-  margin: auto;
-  margin-bottom: 200px;
+  margin: auto auto 200px;
   text-align: center;
 
   h2 {
-    margin: auto;
-    margin-bottom: 30px;
+    margin: auto auto 30px;
   }
 
   ul {

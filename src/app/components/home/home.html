@@ -56,7 +56,8 @@
     </p>
   </article>
   <aside>
-    <figure scrollScale appGlossyScroll class="glossy-container"><img src="assets/Images/MyPortrait.jpg" alt="">
+    <figure scrollScale appGlossyScroll class="glossy-container"><img ngSrc="assets/Images/MyPortrait.jpg" alt=""
+                                                                      height="4608" width="3456">
       <div class="glossy-shine"></div>
     </figure>
   </aside>
@@ -66,7 +67,7 @@
   <h2 >Tools and skills</h2>
   <ul>
     @for (tool of tools; track $index) {
-      <li><img class="btn" src="{{tool.imagePath}}" alt="{{tool.alt}}"></li>
+      <li><img class="btn" [src]="tool.imagePath" alt="{{tool.alt}}"></li>
     }
   </ul>
 </section>
