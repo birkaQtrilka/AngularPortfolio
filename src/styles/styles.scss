@@ -12,6 +12,7 @@
   /* served from src/assets/Fonts/WoodfordBornePro -> available at /assets/Fonts/WoodfordBornePro/ */
   src: url('/assets/Fonts/WoodfordBornePro/WoodfordBournePro-Regular.ttf') format('truetype');
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -54,13 +55,15 @@ body {
   position: relative;
   overflow: hidden !important;
 }
+
 .wrapper {
   background: linear-gradient(180deg, #121014 0%, #050405 100%);
-
 }
+
 html {
   background-color: #121014;
 }
+
 .clickable {
   cursor: pointer;
 }
@@ -105,17 +108,8 @@ html {
   }
 }
 
-
-
 iframe {
   border: none;
-}
-
-#Debug {
-  position: fixed;
-  top: 0;
-  left: 0;
-  font-size: xx-large;
 }
 
 /* ---------------------------- Scroll Bar S---------------------------- */
@@ -193,32 +187,6 @@ html {
   transform: rotate(1deg);
   opacity: 1;
   pointer-events: none;
-}
-
-.backBtn {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  z-index: 3;
-
-  svg {
-    width: 50px;
-    height: 50px;
-    transform: rotate(-90deg);
-
-    & #primary {
-      fill: var(--cardColor);
-    }
-
-    & #secondary {
-      fill: var(--contrastColor);
-    }
-
-    &:hover {
-      filter: drop-shadow(0px 0px 5px var(--lighterViolet));
-    }
-  }
-
 }
 
 .tag {
