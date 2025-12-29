@@ -66,11 +66,10 @@ export class StarfieldDirective implements OnInit, OnDestroy {
       left: '0',
       top: '0',
       pointerEvents: 'none',
-      zIndex: '-1',
+      // zIndex: '-1',
     } as any);
 
-    // append to body so it's full-screen regardless of host
-    document.body.appendChild(this.canvas);
+    document.body.querySelector<HTMLElement>('.wrapper')?.prepend(this.canvas);
 
     const maybeCtx = this.canvas.getContext('2d');
     if (!maybeCtx) return;
@@ -79,9 +78,9 @@ export class StarfieldDirective implements OnInit, OnDestroy {
     // query exclusions
     this.starExceptions = Array.from(document.querySelectorAll<HTMLElement>(this.excludeSelector || '.starAvoid'));
 
-  // set sizes and observe (debounced)
-  this.resizeCanvas();
-  this.resizeObserver = new ResizeObserver(() => this.scheduleResize());
+    // set sizes and observe (debounced)
+    this.resizeCanvas();
+    this.resizeObserver = new ResizeObserver(() => this.scheduleResize());
     this.resizeObserver.observe(document.body);
     window.addEventListener('resize', this.resizeHandler);
     window.addEventListener('scroll', this.scrollHandler, { passive: true });
@@ -163,8 +162,8 @@ export class StarfieldDirective implements OnInit, OnDestroy {
 
   private animateStars = () => {
     if (!this.ctx || !this.canvas) return;
-  // clear using logical CSS pixels; ctx transform already maps logical -> device pixels
-  this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+    // clear using logical CSS pixels; ctx transform already maps logical -> device pixels
+    this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
     const scrollY = window.scrollY || window.pageYOffset || 0;
     const scrollYDelta = scrollY - this.lastScrollValue;
     this.lastScrollValue = scrollY;

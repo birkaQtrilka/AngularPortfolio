@@ -1,13 +1,12 @@
 <nav class="nav-list">
-  <h1>Adventures</h1>
-
   <ul>
-    <li
-        class="clickable btn orangeAnim"
-        *ngFor="let adventure of adventures; index as i"
-        (click)="onClick(i)"
-    >
+    @for (adventure of adventures; track $index) {
+      <li
+      class="clickable btn orangeAnim"
+      (click)="onClick($index)"
+      >
       {{ adventure.title }}
     </li>
+  }
   </ul>
 </nav>

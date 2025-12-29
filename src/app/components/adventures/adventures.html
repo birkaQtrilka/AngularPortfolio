@@ -17,13 +17,13 @@
       </path>
     </svg>
   </a>
-
+  <h1>Adventures</h1>
+  <app-tag-filter [availableTags]="allTags" (filterChanged)="onTagFilterChanged()"></app-tag-filter>
   <app-navigation-list
       [adventures]="filteredAdventures"
       (selectAdventure)="scrollToAdventure($event)"
   ></app-navigation-list>
 
-  <app-tag-filter [availableTags]="allTags" (filterChanged)="onTagFilterChanged()"></app-tag-filter>
   @for (adventure of filteredAdventures; track adventure.title) {
   <app-adventure-article [title]="adventure.title" [videoPath]="adventure.videoPath" [tags]="adventure.tags"
     [description]="adventure.description" [timeSpent]="adventure.timeSpent" [imagePaths]="adventure.images"

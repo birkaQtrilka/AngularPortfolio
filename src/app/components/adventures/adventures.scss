@@ -6,7 +6,9 @@ main {
   text-align: center;
   border-radius: var(--borderRadius);
   position: relative;
-
+  >h1 {
+    margin-bottom: 30px;
+  }
   app-adventure-article:not(:first-child) {
     margin-top: 100px;
     display: block;

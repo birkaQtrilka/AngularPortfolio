@@ -15,7 +15,7 @@
   </iframe>
 </section>
 <main>
-  <h1 id="Projects" scrollScale >Projects</h1>
+  <h1 id="Projects" scrollScale>Projects</h1>
   <app-separation-line scrollScale></app-separation-line>
   @for (card of cards; track $index) {
     <app-project-card
@@ -56,18 +56,18 @@
     </p>
   </article>
   <aside>
-    <figure scrollScale appGlossyScroll class="glossy-container"><img ngSrc="assets/Images/MyPortrait.jpg" alt=""
-                                                                      height="4608" width="3456">
+    <figure scrollScale appGlossyScroll class="glossy-container">
+      <img ngSrc="assets/Images/MyPortrait2.JPG" alt="" height="4608" width="3456">
       <div class="glossy-shine"></div>
     </figure>
   </aside>
 </section>
 
-<section scrollScale id="tools">
+<section id="tools">
   <h2 >Tools and skills</h2>
   <ul>
     @for (tool of tools; track $index) {
-      <li><img class="btn" [src]="tool.imagePath" alt="{{tool.alt}}"></li>
+      <li scrollScale><img class="btn" [src]="tool.imagePath" alt="{{tool.alt}}"></li>
     }
   </ul>
 </section>

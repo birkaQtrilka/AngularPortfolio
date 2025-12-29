@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 import { BaseScrollDirective } from './scroll-range.directive';
 
 @Directive({
