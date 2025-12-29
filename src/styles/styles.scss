@@ -45,8 +45,9 @@ video {
 iframe {
   border: none;
 
-  // bacground stars for some reason leak through, this prevents that
-  background-color: var(--cardColor);
+  // background stars for some reason leak through, this prevents that
+  position: relative;
+  z-index: 1;
 }
 
 body {
