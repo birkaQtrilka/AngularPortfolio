@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -9,13 +9,16 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
     '(click)': 'close()'
   }
 })
-export class Modal {
+export class Modal implements OnDestroy{
   @ViewChild('image') image!: ElementRef;
   @ViewChild('caption') caption!: ElementRef;
 
   private prevScrollY = 0;
 
   constructor(private host: ElementRef) {}
+  ngOnDestroy(): void {
+    this.close();
+  }
 
   open(imagePath: string, caption: string = "") {
     // Save scroll
