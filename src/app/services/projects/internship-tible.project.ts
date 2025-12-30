@@ -4,6 +4,7 @@ export const PROJECT_INTERNSHIP_TIBLE: Project = {
   id: 'internship-tible',
   title: 'Internship at Tible',
   videoPath: { isIframe: false, path: '/assets/videos/VueWebsiteDEMO.mp4' },
+  tags: ['Angular', 'Dashboard', 'Data Visualization', 'Internship', 'Frontend'],
   description: `
     <p>
       &emsp; During this internship I was responsible for the front-end of a dashboard application.

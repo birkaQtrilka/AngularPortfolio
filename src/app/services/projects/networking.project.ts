@@ -4,6 +4,7 @@ export const PROJECT_NETWORKING: Project = {
   id: 'networking',
   title: 'Networking',
   videoPath: { isIframe: false, path: '/assets/videos/Netw.mp4' },
+  tags: ['C#', 'Sockets', 'TCP/IP', 'Game Development'],
   description: `
     <p>
       &emsp; A checkers game you can run on LAN that can handle more than one match at a time.

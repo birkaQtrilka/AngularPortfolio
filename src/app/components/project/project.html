@@ -14,7 +14,7 @@
       </iframe>
     }
     @else {
-      <video autoplay controls loop muted playsinline>
+      <video [autoplay]="true" [muted]="true" controls loop playsinline>
         <source [src]="project?.videoPath?.path">
       </video>
     }

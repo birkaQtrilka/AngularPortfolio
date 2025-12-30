@@ -4,6 +4,7 @@ export const PROJECT_PROCEDURAL_GENERATION: Project = {
   id: 'procedural-generation',
   title: 'Procedural Generation',
   videoPath: { isIframe: true, path: 'https://www.youtube.com/embed/DZ5OSu2idMM?si=xpWqPIWNGzoO9sC_' },
+  tags: ['C#', 'Unity', 'Procedural Generation'],
   description: `
     <p>
       &emsp; An extension of the previous wave function collapse projects, in which I made a space

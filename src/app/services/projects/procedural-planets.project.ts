@@ -3,6 +3,7 @@ export const PROJECT_PROCEDURAL_PLANETS = {
   id: 'procedural-planets',
   title: 'Procedural Planets',
   videoPath: { isIframe: true, path: 'https://www.youtube.com/embed/xWtM5TTlcCg?si=SP-D82S2Abjb2Z7v' },
+  tags: ['C#', 'Unity', 'Procedural Generation'],
   description: `
     <p>
       &emsp; A continuation of Sebastian Lague's 

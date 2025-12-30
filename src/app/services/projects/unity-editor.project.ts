@@ -7,6 +7,7 @@ export const PROJECT_UNITY_EDITOR: Project = {
     isIframe: true,
     path: 'https://www.youtube.com/embed/fxm84SgOHKQ?si=7dpSixjv1GXwiqsv'
   },
+  tags: ['C#', 'Unity', 'Editor Scripting', 'Tool Development'],
   description: `
     <h3>Product</h3>
     <p>

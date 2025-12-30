@@ -6,12 +6,12 @@ main {
 
   >article {
     h1 {
-      width: 80%;
+      width: var(--project-padding);
       margin: auto;
       font-size: x-large;
     }
     section {
-      width: 80%;
+      width: var(--project-padding);
     }
     video {
       object-fit: cover;

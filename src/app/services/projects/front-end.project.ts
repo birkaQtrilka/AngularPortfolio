@@ -4,6 +4,7 @@ export const PROJECT_FRONT_END: Project = {
   id: 'front-end',
   title: 'Front End',
   videoPath: { isIframe: false, path: '/assets/videos/VueWebsiteDEMO.mp4' },
+  tags: ['Vue.js', 'Vuex', 'Mobile First Design', 'Frontend Development'],
   description: `
     <p>
       &emsp; A house listing web application made with Vue.js and Vuex. It uses a mock API to fetch

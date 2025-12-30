@@ -4,6 +4,7 @@ export const PROJECT_CPP_PROJECTS: Project = {
   id: 'cpp-projects',
   title: 'C++ Projects',
   videoPath: { isIframe: false, path: '/assets/videos/cppProjects.mp4' },
+  tags: ['C++', 'OpenGL', '3D Rendering'],
   description: `
     <p>
       &emsp; These are the C++ projects I worked on during my studies. In the video you can see the

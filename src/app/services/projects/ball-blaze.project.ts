@@ -7,6 +7,7 @@ export const PROJECT_BALL_BLAZE: Project = {
     isIframe: true,
     path: 'https://www.youtube.com/embed/WSp8GvMaYyA'
   },
+  tags: ['C#', 'GxpEngine', '2D Physics', 'Team Project', 'Game Development'],
   description: `
       <h3>Game</h3>
       <p>

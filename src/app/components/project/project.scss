@@ -30,16 +30,14 @@ main {
       pointer-events: auto;
     }
 
-    video {
-      object-fit: cover;
-    }
-
     & iframe {
       width: 100%;
     }
 
     &>div {
+      width: var(--project-padding);
       display: flex;
+      justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
       margin: auto;
