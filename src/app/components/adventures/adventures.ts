@@ -1,4 +1,5 @@
 import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import { trigger, transition, animate, style } from '@angular/animations';
 import { CodingAdventure } from '../../models/coding-adventure.model';
 import { CODING_BOIDS } from './constants/boids.adventure';
 import { CODING_DOTS } from './constants/dots.adventure';
@@ -20,7 +21,18 @@ import {NavigationList} from "../navigation-list/navigation-list";
     NavigationList
   ],
   templateUrl: './adventures.html',
-  styleUrl: './adventures.scss'
+  styleUrl: './adventures.scss',
+  animations: [
+    trigger('collapseAnimation', [
+      transition(':enter', [
+        style({ height: 0, opacity: 0, overflow: 'hidden', scale: 0 }),
+        animate('300ms ease-out', style({ height: '*', opacity: 1, overflow: 'visible', scale: 1 }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-out', style({ height: 0, opacity: 0, overflow: 'hidden', scale: 0 }))
+      ])
+    ])
+  ]
 })
 export class Adventures {
   protected adventures: CodingAdventure[] = [

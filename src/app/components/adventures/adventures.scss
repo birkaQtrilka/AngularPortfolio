@@ -10,8 +10,11 @@ main {
   >h1 {
     margin-bottom: 30px;
   }
-  app-adventure-article:not(:first-child) {
+  div:not(:first-child) {
     margin-top: 100px;
+  }
+
+  app-adventure-article {
     display: block;
   }
 

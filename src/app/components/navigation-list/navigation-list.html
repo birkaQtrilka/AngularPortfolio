@@ -2,6 +2,7 @@
   <ul>
     @for (adventure of adventures; track $index) {
       <li
+      @collapseAnimation
       class="clickable btn orangeAnim"
       (click)="onClick($index)"
       >
