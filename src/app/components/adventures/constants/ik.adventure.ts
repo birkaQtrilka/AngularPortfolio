@@ -12,5 +12,5 @@ export const CODING_IK: CodingAdventure = {
   `,
   timeSpent: '2 days',
   images: ['/assets/Images/SideProjects/Ik_Code.png'],
-  githubLink: 'https://github.com/birkaQtrilka/ProceduralAnimation/blob/main/Assets/Scripts/Leg.cs'
+  githubLink: 'https://github.com/birkaQtrilka/ProceduralAnimation/blob/main/Assets/Spider/LegManager.cs'
 };

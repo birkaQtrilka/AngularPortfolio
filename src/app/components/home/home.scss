@@ -59,6 +59,7 @@
     }
 
     h2 {
+      transform-origin: 50% 100%;
       margin-bottom: 30px;
     }
 
@@ -113,7 +114,6 @@ main {
     /* Align items to the top */
     justify-content: center;
     list-style: none;
-    /* Optional: remove bullets */
     padding: 0;
     gap: 10px;
     margin: 0;

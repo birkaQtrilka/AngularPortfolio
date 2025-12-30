@@ -8,7 +8,7 @@ export const CODING_PATHFINDING: CodingAdventure = {
   description: `
     &emsp; A scene with an orc that moves from A to B through a procedurally generated dungeon by the shortest path. The dungeon is 
     generated using a binary space partitioning algorithm, the rooms that "collide" will form doors that will be elongated as the rooms
-    randomly shrink. The pathfinding is implemented using the <a href="https://www.geeksforgeeks.org/a-search-algorithm/">A* algorithm</a>.
+    randomly shrink. The pathfinding is implemented using the <a target="_blank" href="https://www.geeksforgeeks.org/a-search-algorithm/">A* algorithm</a>.
     <br>&emsp;The main challenges were: 
     <br>&emsp;&emsp;How to connect the rooms? – solved with the previously mentioned collision idea
     <br>&emsp;&emsp;Creating a custom min heap container for the A* implementation.
