@@ -1,8 +1,9 @@
+@import url("adventures-l.scss") screen and (min-width: 767px) ;
+@import url("adventures-s.scss") screen and (max-width: 766px) ;
 main {
   min-height: 900px;
   background-color: var(--cardColor);
   box-shadow: var(--grayShadow);
-  padding: 90px 120px;
   text-align: center;
   border-radius: var(--borderRadius);
   position: relative;
@@ -16,8 +17,6 @@ main {
 
   .back-btn {
     position: absolute;
-    left: 40px;
-    top: 40px;
     z-index: 3;
 
     svg {
@@ -63,17 +62,5 @@ main {
     & #secondary {
       fill: var(--contrastColor);
     }
-  }
-}
-
-@media screen and (min-width: 767px) {
-  main {
-    margin: auto;
-    margin-top: 150px;
-    width: 70%;
-  }
-
-  .tags {
-    width: 60%;
   }
 }

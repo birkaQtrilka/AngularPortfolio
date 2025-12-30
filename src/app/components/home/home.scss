@@ -1,3 +1,6 @@
+@import url("home-l.scss") screen and (min-width: 767px) ;
+@import url("home-s.scss") screen and (max-width: 766px) ;
+
 .intro {
   margin-top: 100px;
   text-align: center;
@@ -24,8 +27,6 @@
   }
 
   iframe {
-    width: calc(var(--largeMargin ));
-    min-width: 500px;
 
     box-shadow: var(--lightShadow);
     border: 5px solid var(--footerColor);
@@ -49,10 +50,8 @@
   display: flex;
   justify-content: space-between;
   margin: auto auto 50px;
-  flex-direction: row-reverse;
 
   article {
-    flex-basis: 60%;
     text-align: left;
 
     p {
@@ -61,28 +60,21 @@
 
     h2 {
       margin-bottom: 30px;
-      transform-origin: left;
     }
 
   }
 
   aside {
-    flex-basis: 35%;
-
     img {
       width: 100%;
     }
   }
-
-
-
 }
 
 main {
   width: var(--largeMargin);
   display: flex;
   border-radius: 3px;
-  margin: 100px auto 250px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -99,7 +91,6 @@ main {
   }
 
   app-project-card {
-    flex-basis: calc(50% - var(--largeProjectArticleGap));
     padding: 5px;
     margin-bottom: 100px;
     min-height: 300px;

@@ -33,6 +33,7 @@ video {
 article>section {
   margin: auto;
   text-align: left;
+  width: 80%;
 
   ::ng-deep {
 
@@ -102,6 +103,9 @@ section.sideBySideImages {
 }
 
 @media screen and (min-width: 767px) {
+  article>section {
+    width: 100%;
+  }
   video {
     height: 380px;
     object-fit: cover;
