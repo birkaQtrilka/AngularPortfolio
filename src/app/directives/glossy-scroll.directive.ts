@@ -6,8 +6,8 @@ import { BaseScrollDirective } from './scroll-range.directive';
 })
 export class GlossyScrollDirective extends BaseScrollDirective {
 
-  @Input() override range: number = 300;
-  @Input() override offset: number = 0;
+  @Input() override range: number = 100; // 100vh
+  @Input() override offset: number = 0; // 0vh
 
   @HostBinding('class.glossy-container') glossyContainerClass = true;
 
@@ -16,7 +16,7 @@ export class GlossyScrollDirective extends BaseScrollDirective {
   override ngOnInit(): void {
     super.ngOnInit();
 
-    this.range = window.innerHeight ;
+    this.range = 100; // 100vh
     this.ensureShineElement();
   }
 

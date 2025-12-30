@@ -4,8 +4,8 @@ import { Directive, ElementRef, Input, OnInit, Renderer2, OnDestroy } from '@ang
   selector: '[appBaseScroll]'
 })
 export class BaseScrollDirective implements OnInit, OnDestroy {
-  @Input() range: number = 300;  
-  @Input() offset: number = 0;  
+  @Input() range: number = 30;  // 30vh
+  @Input() offset: number = 0;  // 0vh  
   
   protected container: HTMLElement;
   private scrollListener: () => void = () => {};
@@ -26,7 +26,10 @@ export class BaseScrollDirective implements OnInit, OnDestroy {
   private setupScrollListener() {
     return () => {
       const rect = this.container.getBoundingClientRect();
-      let t = (rect.y + this.offset) / this.range;
+      const vh = window.innerHeight / 100;
+      const offsetPx = this.offset * vh;
+      const rangePx = this.range * vh;
+      let t = (rect.y + offsetPx) / rangePx;
       t = this.clamp(t, -1, 1);
       this.applyTransformation(t);
     };

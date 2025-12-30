@@ -5,12 +5,12 @@ import { BaseScrollDirective } from './scroll-range.directive';
   selector: '[scrollScale]' 
 })
 export class ScrollScaleDirective extends BaseScrollDirective {
-  @Input() override range: number = 300;  // Default range
-  @Input() override offset: number = -400;   // Default offset
+  @Input() override range: number = 100;  // 100vh
+  @Input() override offset: number = -40;   // -40vh
 
   override ngOnInit(): void {
     super.ngOnInit();
-    this.range = window.innerHeight;
+    this.range = 100; // 100vh
   }
 
   protected override applyTransformation(t: number): void {
